@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=10; IE=11; IE=EDGE">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Go Open</title>
+  </head>
+  <body>
+
+<!-- IFRAME -->
+
+  <section class="container iframe">
+    <div class="row buscadores">
+      <div class="col-12">
+        <div class="titularseccion">
+          <p>Cat&aacute;logo de Cupones</p>
+        </div>
+      </div>
+
+
+      <div id="categorias" class="col-xs-12 col-sm-6 col-lg-3">
+        <div class="custom-select">
+          <select>
+            <option selected disabled>Cupones</option>
+            <option value="0">Todos los cupones</option>
+            <option value="1">Freddo</option>
+            <option value="2">Cinemark 2D</option>
+            <option value="3">Cinemark 3D</option>
+            <option value="4">Hoyts 3D</option>
+            <option value="5">Showcase</option>
+            <option value="6">Etc.</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+    <div class="row ">
+      <div class="col-12 seccionesinternas header-marca">
+        <p><span>Cupones</span>></p><span id="name">$Marca</span>
+      </div>
+    </div>
+    <div class="row marca-in">
+      <div class="col-xs-12 col-sm-6 break-1">
+        <!-- <div class="col-xs-12" id="logo">
+          <div class="img">
+            <img src="images/hoyts.jpg" alt="fravega">
+          </div>
+        </div> -->
+
+        <div class="col-xs-12 infopuntos">
+
+            <div class="puntos"  style="padding-right:0">
+              <h3>Cupon Hoyts </h3><span id="value"><p>$15.000</p></span>
+            </div>
+            <div class="puntos"  style="padding-right:0">
+              <h3>Puntos para obtener cupón </h3><span id="puntos-cupon"><p>90.000</p></span>
+            </div>
+            <div class="puntos"  style="padding-right:0">
+              <h3>Puntos disponibles</h3><span id="puntos-disponibles"><p>75.000</p></span>
+            </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 break-2">
+        <div class="disclaim">
+          <span id="description"><p>&iexcl;Canje&aacute; tus puntos por <span id="cupon"><strong>$15.000</strong><span> para comprar en Fr&aacute;vega!</p></span>
+          <span id="how_to"><p>&iexcl;Recibir&aacute;s un correo electr&oacute;nico con un voucher para que puedas presentar al momento de abonar en la tienda Fr&aacute;vega m&aacute;s cercana y listo!</p></span>
+          <p>Encontr&aacute; todas las sucursales en: <a href="http://www.fravega.com/sucursales">www.fravega.com/sucursales</a></p>
+          <p>Los c&oacute;digos podr&aacute;n ser presentados en todas las tiendas Fr&aacute;vega excepto en la tienda online, venta telef&oacute;nica y Outlet de Pompeya.</p>
+        </div>
+      </div>
+
+      </div>
+      <div class="col-xs-12 redimir canjear-cupon">
+        <button onclick="openModal()" ><p>Canjear</p></button>
+      </div>
+    </div>
+  </section>
+
+  <div id="confirmacion" class="modal fade">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Confirmaci&oacute;n</h4>
+          </div>
+          <div class="modal-body">
+              <p>Le enviaremos con la Gift Card canjeada</p>
+              <p>¿Confirma que este es su mail?</p>
+              <p class="text-warning">$email</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal"><p>Volver</p></button>
+              <button type="button" class="btn btn-primary"><p>Continuar</p></button>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="puntos_insuficientes" class="modal fade">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <img src="images/nopoints.svg" alt="">
+            <h5>No tenés puntos suficientes para canjear este premio. </h5>
+            <p>Completá los desafíos y sumá más puntos.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal"><p>Volver</p></button>
+        </div>
+    </div>
+</div>
+</div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script  src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <script type="text/javascript">
+      $(window).on('load',function(){
+        // $('#puntos_insuficientes').modal('show');
+    });
+    </script>
+    <script type="text/javascript">
+      var puntos = $('#puntos-cupon p').text();
+      var disponibles =$('#puntos-disponibles p').text();
+      $(document).ready(function() {
+        if (disponibles < puntos) {
+          $('#puntos-disponibles p').css("color", "red");
+        }
+        return false;
+      });
+
+    </script>
+
+  </body>
+</html>
