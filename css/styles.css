@@ -1578,3 +1578,41 @@ div.volumenpuntos span * {
       text-align: center;
     }
   }
+
+}
+
+  .modal-sin-audiencia .modal-dialog .modal-content {
+    border-radius: 5px;
+  }
+
+  .modal-sin-audiencia .modal-dialog .modal-content h3 {
+    color: #268cb1;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  
+  .modal-sin-audiencia .modal-dialog .modal-content p {
+    font-size: 18px;
+    color: #999;
+    font-weight: 400;
+  }
+
+  .modal-sin-audiencia .modal-dialog .modal-content h2 {
+    color: #0ed5ae;
+    font-weight: 600;
+  }
+
+  .modal-sin-audiencia .modal-dialog .modal-content .canjear {
+  background-color: #0ed5ae;
+  padding: 5px 65px;
+  color: white;
+}
+
+.modal-sin-audiencia .modal-dialog .modal-content .canjear:hover {
+  background: #1abc9c;
+}
+
+.modal-sin-audiencia .modal-dialog .modal-content .modal-footer {
+  margin-bottom: 20px;
+}
