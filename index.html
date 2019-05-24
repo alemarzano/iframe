@@ -1,288 +1,334 @@
 <!DOCTYPE html>
 
 <html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=10; IE=11; IE=EDGE" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Go Open</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=10; IE=11; IE=EDGE">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <title>Go Open</title>
-</head>
-
-<body>
-
-
-  <!--IFRAME CUPONSTAR-->
-  <section class="container cupones ">
-    <div class="row buscadores">
-      <div class="col-xs-12 searchfield">
-        <div class="search">
-          <input type="text" name="search" placeholder=" &#xF002; Buscar..." style="font-family:sans-serif, FontAwesome">
-        </div>
-      </div>
-      <div class="col-xs-12 titularseccion">
-        <p>Cat&aacute;logo de Cupones</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-lg-3" id="categorias">
-        <div class="custom-select">
-          <select>
-            <option selected disabled>Cupones</option>
-            <option value="0">Todos los cupones</option>
-            <option value="1">Freddo</option>
-            <option value="2">Cinemark 2D</option>
-            <option value="3">Cinemark 3D</option>
-            <option value="4">Hoyts 3D</option>
-            <option value="5">Showcase</option>
-            <option value="6">Etc.</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="row ">
-      <div class="col-xs-12 titularseccion">
-        <p>Cupones Destacados</p>
-      </div>
-    </div>
-
-    <div class="listado-cupones">
-      <div class="row">
-        <div class="col-xs-6 col-sm-3">
-
-          <!-- Estructura nueva -->
-          <div class="card">
-            <span class="product-points">
-              <b>90.000</b> pts
-            </span>
-            <div class="card-head">
-              <img src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/6OUyi7yOBRpB6K9JQ2X2yw3R9GMxAlfTWBiHwxjL.png"
-                alt="">
-            </div>
-            <div class="card-body">
-              <a href="producto_cupon.html">CANJEAR</a>
-            </div>
-          </div>
-          <!-- Estructura nueva -->
-
-        </div>
-        <div class="col-xs-6 col-sm-3">
-          <div class="card">
-            <span class="product-points">
-              <b>90.000</b> pts
-            </span>
-            <div class="card-head">
-              <img src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/3WxfXdNQHbat0rRNkidUDGRZGPLCjZCQQadiBXlc.png"
-                alt="">
-            </div>
-            <div class="card-body">
-
-              <a href="producto_cupon.html">CANJEAR</a>
-            </div>
+  <body>
+    <!--IFRAME CUPONSTAR-->
+    <section class="container cupones ">
+      <div class="row buscadores">
+        <div class="col-xs-12 searchfield">
+          <div class="search">
+            <input
+              type="text"
+              name="search"
+              placeholder=" &#xF002; Buscar..."
+              style="font-family:sans-serif, FontAwesome"
+            />
+            <button type="button" class="history">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              <h4>Consultar Historial</h4>
+            </button>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-3">
-          <div class="card">
-            <span class="product-points">
-              <b>90.000</b> pts
-            </span>
-            <div class="card-head">
-              <img src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/Ktx8j2s0LeBVCwc3APcTtCN1Hs9Wi2c3meiLBYeW.png"
-                alt="">
-            </div>
-            <div class="card-body">
-
-              <a href="producto_cupon.html">CANJEAR</a>
-            </div>
-          </div>
+        <div class="col-xs-12 titularseccion">
+          <p>Cat&aacute;logo de Cupones</p>
         </div>
-        <div class="col-xs-6 col-sm-3">
-          <div class="card">
-            <span class="product-points">
-              <b>90.000</b> pts
-            </span>
-            <div class="card-head">
-              <img src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/Ktx8j2s0LeBVCwc3APcTtCN1Hs9Wi2c3meiLBYeW.png"
-                alt="">
-            </div>
-            <div class="card-body">
-
-              <a href="producto_cupon.html">CANJEAR</a>
-            </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3" id="categorias">
+          <div class="custom-select">
+            <select>
+              <option selected disabled>Cupones</option>
+              <option value="0">Todos los cupones</option>
+              <option value="1">Freddo</option>
+              <option value="2">Cinemark 2D</option>
+              <option value="3">Cinemark 3D</option>
+              <option value="4">Hoyts 3D</option>
+              <option value="5">Showcase</option>
+              <option value="6">Etc.</option>
+            </select>
           </div>
         </div>
       </div>
 
+      <div class="row ">
+        <div class="col-xs-12 titularseccion">
+          <p>Cupones Destacados</p>
+        </div>
+      </div>
+
+      <div class="listado-cupones">
+        <div class="row">
+          <div class="col-xs-6 col-sm-3">
+            <!-- Estructura nueva -->
+            <div class="card">
+              <span class="product-points"> <b>90.000</b> pts </span>
+              <div class="card-head">
+                <img
+                  src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/6OUyi7yOBRpB6K9JQ2X2yw3R9GMxAlfTWBiHwxjL.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <a href="producto_cupon.html">CANJEAR</a>
+              </div>
+            </div>
+            <!-- Estructura nueva -->
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="card">
+              <span class="product-points"> <b>90.000</b> pts </span>
+              <div class="card-head">
+                <img
+                  src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/3WxfXdNQHbat0rRNkidUDGRZGPLCjZCQQadiBXlc.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <a href="producto_cupon.html">CANJEAR</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="card">
+              <span class="product-points"> <b>90.000</b> pts </span>
+              <div class="card-head">
+                <img
+                  src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/Ktx8j2s0LeBVCwc3APcTtCN1Hs9Wi2c3meiLBYeW.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <a href="producto_cupon.html">CANJEAR</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div class="card">
+              <span class="product-points"> <b>90.000</b> pts </span>
+              <div class="card-head">
+                <img
+                  src="https://s3.amazonaws.com/vouchers.bonda.us/coupons/Ktx8j2s0LeBVCwc3APcTtCN1Hs9Wi2c3meiLBYeW.png"
+                  alt=""
+                />
+              </div>
+              <div class="card-body">
+                <a href="producto_cupon.html">CANJEAR</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIN CUPONSTAR -->
+
+    <!-- IFRAME GIFTCARD -->
+    <section class="container productos">
+      <div class="col-12">
+        <div class="titularseccion">
+          <p>Cat&aacute;logo de Gift Cards</p>
+        </div>
+      </div>
+      <div class="row buscadores">
+        <div id="categorias" class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="custom-select">
+            <select>
+              <option selected disabled>Categor&iacute;as</option>
+              <option value="0">Todas</option>
+              <option value="1">Belleza y Cuidado Personal</option>
+              <option value="2">Calzado y Marroquiner&iacute;a</option>
+              <option value="3">Deporte y Outdoor</option>
+              <option value="4">Gastronom&iacute;a</option>
+              <option value="5">Hogar, Deco y Electro</option>
+              <option value="6">Joyer&iacute;a</option>
+              <option value="7">Moda Femenina</option>
+              <option value="8">Moda Masculina</option>
+              <option value="9">Moda Ni&ntilde;os</option>
+              <option value="10">Moda Unisex</option>
+              <option value="11">Multimarca</option>
+              <option value="12">&Oacute;ptica</option>
+              <option value="13">Vinoteca</option>
+            </select>
+          </div>
+        </div>
+        <div id="marcas" class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="custom-select">
+            <select>
+              <option selected disabled>Marcas</option>
+              <option id="off" value="0">OFERTAS</option>
+              <option value="1">Cuesta Blanca</option>
+              <option value="2">Fr&aacute;vega</option>
+              <option value="3">Mimo&Co</option>
+              <option value="4">Penguin</option>
+              <option value="5">Swarovski</option>
+              <option value="6">Tommy Hilfiger</option>
+              <option value="7">Vitamina</option>
+              <option value="8">Volcom</option>
+            </select>
+          </div>
+        </div>
+        <div id="provincias" class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="custom-select">
+            <select>
+              <option selected disabled>Provincias</option>
+              <option value="0">Buenos Aires</option>
+              <option value="1">C.A.B.A</option>
+              <option value="2">Catamarca</option>
+              <option value="3">Chaco</option>
+              <option value="4">Chubut</option>
+              <option value="5">C&oacute;rdoba</option>
+              <option value="6">Corrientes</option>
+              <option value="7">Formosa</option>
+            </select>
+          </div>
+        </div>
+        <div id="localidades" class="col-xs-12 col-sm-6 col-lg-3">
+          <div class="custom-select">
+            <select>
+              <option selected disabled>Localidades</option>
+              <option value="0">$locA</option>
+              <option value="1">$locB</option>
+              <option value="2">$locC</option>
+              <option value="3">$locD</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-12 titularseccion">
+          <p>PREMIOS DESTACADOS</p>
+        </div>
+      </div>
+      <div class="row destacados">
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="producto.html"><img src="images/1.jpg" alt=""/></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="#"
+              ><img src="images/2.jpg" alt="" />
+              <div class="shape">
+                <span class="sale">
+                  <p>-40%</p>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="#"><img src="images/3.jpg" alt=""/></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="#"
+              ><img src="images/4.jpg" alt="" />
+              <div class="shape">
+                <span class="sale">
+                  <p>-40%</p>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="#"
+              ><img src="images/5.jpg" alt="" />
+              <div class="shape">
+                <span class="sale">
+                  <p>-40%</p>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="#"><img src="images/6.jpg" alt=""/></a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="#"
+              ><img src="images/7.jpg" alt="" />
+              <div class="shape">
+                <span class="sale">
+                  <p>-40%</p>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+            <a href="#"><img src="images/8.jpg" alt=""/></a>
+          </div>
+        </div>
+        <div class="col-xs-12 helper">
+          <div class="beneficios">
+            <a href="#">
+              <h4>&iquest;C&oacute;mo canejo los beneficios?</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIN GIFTCARD -->
+
+    <!-- MODAL FILTRO -->
+    <div id="myModal" class="modal fade modal-go" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>            
+          </div>
+          <div class="modal-body">
+            <img class="location" src="images/location.svg" alt="location goopen" >
+            <h3>Bienvenido al <br>catálogo de canjes</h3>     
+            <p>
+                No olvides utilizar los filtros para encontrar los locales adheridos en tu provincia
+            </p>       
+
+            <div class="row buscadores">             
+              <div id="localidades" class="col-xs-10 col-xs-offset-1">
+                <div class="custom-select">
+                  <select>
+                    <option selected disabled>Localidades</option>
+                    <option value="0">$locA</option>
+                    <option value="1">$locB</option>
+                    <option value="2">$locC</option>
+                    <option value="3">$locD</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="ok-popup" data-dismiss="modal">
+              Entendido
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-  </section>
-  <!-- FIN CUPONSTAR -->
-
-  <!-- IFRAME GIFTCARD -->
-  <section class="container productos">
-    <div class="col-12">
-      <div class="titularseccion">
-        <p>Cat&aacute;logo de Gift Cards</p>
-      </div>
-    </div>
-    <div class="row buscadores">
-
-
-      <div id="categorias" class="col-xs-12 col-sm-6 col-lg-3">
-        <div class="custom-select">
-          <select>
-            <option selected disabled>Categor&iacute;as</option>
-            <option value="0">Todas</option>
-            <option value="1">Belleza y Cuidado Personal</option>
-            <option value="2">Calzado y Marroquiner&iacute;a</option>
-            <option value="3">Deporte y Outdoor</option>
-            <option value="4">Gastronom&iacute;a</option>
-            <option value="5">Hogar, Deco y Electro</option>
-            <option value="6">Joyer&iacute;a</option>
-            <option value="7">Moda Femenina</option>
-            <option value="8">Moda Masculina</option>
-            <option value="9">Moda Ni&ntilde;os</option>
-            <option value="10">Moda Unisex</option>
-            <option value="11">Multimarca</option>
-            <option value="12">&Oacute;ptica</option>
-            <option value="13">Vinoteca</option>
-          </select>
-        </div>
-      </div>
-      <div id="marcas" class="col-xs-12 col-sm-6 col-lg-3">
-        <div class="custom-select">
-          <select>
-            <option selected disabled>Marcas</option>
-            <option id="off" value="0">OFERTAS</option>
-            <option value="1">Cuesta Blanca</option>
-            <option value="2">Fr&aacute;vega</option>
-            <option value="3">Mimo&Co</option>
-            <option value="4">Penguin</option>
-            <option value="5">Swarovski</option>
-            <option value="6">Tommy Hilfiger</option>
-            <option value="7">Vitamina</option>
-            <option value="8">Volcom</option>
-
-          </select>
-        </div>
-      </div>
-      <div id="provincias" class="col-xs-12 col-sm-6 col-lg-3">
-        <div class="custom-select">
-          <select>
-            <option selected disabled>Provincias</option>
-            <option value="0">Buenos Aires</option>
-            <option value="1">C.A.B.A</option>
-            <option value="2">Catamarca</option>
-            <option value="3">Chaco</option>
-            <option value="4">Chubut</option>
-            <option value="5">C&oacute;rdoba</option>
-            <option value="6">Corrientes</option>
-            <option value="7">Formosa</option>
-          </select>
-        </div>
-      </div>
-      <div id="localidades" class="col-xs-12 col-sm-6 col-lg-3">
-        <div class="custom-select">
-          <select>
-            <option selected disabled>Localidades</option>
-            <option value="0">$locA</option>
-            <option value="1">$locB</option>
-            <option value="2">$locC</option>
-            <option value="3">$locD</option>
-
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="row ">
-      <div class="col-12 titularseccion">
-        <p>PREMIOS DESTACADOS</p>
-      </div>
-    </div>
-    <div class="row destacados">
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="producto.html"><img src="images/1.jpg" alt=""></a>
-        </div>
-
-      </div>
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="#"><img src="images/2.jpg" alt="">
-            <div class="shape"><span class="sale">
-                <p>-40%</p>
-              </span></div>
-          </a>
-        </div>
-
-      </div>
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="#"><img src="images/3.jpg" alt=""></a>
-        </div>
-
-      </div>
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="#"><img src="images/4.jpg" alt="">
-            <div class="shape"><span class="sale">
-                <p>-40%</p>
-              </span></div>
-          </a>
-        </div>
-
-      </div>
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="#"><img src="images/5.jpg" alt="">
-            <div class="shape"><span class="sale">
-                <p>-40%</p>
-              </span></div>
-          </a>
-        </div>
-
-      </div>
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="#"><img src="images/6.jpg" alt=""></a>
-        </div>
-
-      </div>
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="#"><img src="images/7.jpg" alt="">
-            <div class="shape"><span class="sale">
-                <p>-40%</p>
-              </span></div>
-          </a>
-        </div>
-
-      </div>
-      <div class="col-xs-6 col-sm-3">
-        <div class="marca">
-          <a href="#"><img src="images/8.jpg" alt=""></a>
-        </div>
-      </div>
-      <div class="col-xs-12 helper">
-        <div class="beneficios">
-          <a href="#">
-            <h4>&iquest;C&oacute;mo canejo los beneficios?</h4>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- FIN GIFTCARD -->
-
-
-
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/events.js"></script>
-</body>
-
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <script>
+      $(window).on("load", function() {
+        $("#myModal").modal("show");
+      });
+    </script>
+  </body>
 </html>

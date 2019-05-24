@@ -1,8 +1,7 @@
 body {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-
 }
 
 a:hover {
@@ -23,35 +22,119 @@ li {
 
 .search {
   margin: 20px auto;
+  display: flex;
+}
+/*** HISTORIAL DE BUSQUEDA ***/
+.search button.history {
+  border: none;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #0ed5ae;
+  color: #bdf3e9;
+  border-radius: 3px;
+  padding: 3px 10px;
+  min-width: 214px;
+  transition: 0.4s ease-in-out;
+}
+.modal-go .close {
+  font-size: 26px;
+}
+.modal-go .modal-body .location {
+  width: 150px;
+}
+.modal-go .modal-body {
+  padding: 10px 25px;
+}
+.modal-go .modal-body > * {
+  letter-spacing: 1px;
+}
+.modal-go .modal-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px auto 20px;
+  color: #7d7d7d;
+  text-transform: uppercase;
+}
+.modal-go .modal-body p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 15px;
+  color: #909090;
+}
+.modal-go .buscadores {
+  margin: 30px auto;
+}
+.modal-go .buscadores .custom-select {
+  box-shadow: 1px 4px 6px 0px #e6e6e6;
+}
+.modal-go .buscadores .custom-select .select-selected {
+  color: #5ca3dc;
+}
+.modal-go .buscadores .custom-select .select-items div {
+  color: #95c3e8;
+}
+.ok-popup {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  background-color: #266ea8;
+  display: block;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: 0.5s;
+  font-weight: 600;
+  width: 100%;
+  border: none;
 }
 
+.ok-popup:hover {
+  filter: brightness(1.1);
+  transform: scale(0.9);
+}
+@media (min-width: 768px) {
+  .modal-go .modal-sm {
+    width: 420px;
+  }
+}
+.search button.history > * {
+  margin: 0 5px;
+}
+.search button.history i {
+  font-size: 20px;
+}
+.search button.history:hover {
+  background-color: #266ea8;
+  color: #92c6f0;
+}
 .searchfield {
   padding: 0;
 }
 
-.searchfield input[type=text] {
+.searchfield input[type="text"] {
   width: 100%;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   border: 2px solid #f3f3f3;
   border-radius: 5px;
   padding: 10px;
   font-size: 1em;
-  transition: .3s,
 }
 
-.searchfield input[type=text]::-webkit-input-placeholder {
+.searchfield input[type="text"]::-webkit-input-placeholder {
   color: #266ea8;
 }
 
-.searchfield input[type=text]:hover {
+.searchfield input[type="text"]:hover {
   cursor: auto;
 }
 
-.searchfield input[type=text]:focus {
+.searchfield input[type="text"]:focus {
   outline: none;
   border: 2px solid rgba(14, 213, 174, 0.3);
-  box-shadow: 0px 0px 5px rgba(14, 213, 174, 0.4)
+  box-shadow: 0px 0px 5px rgba(14, 213, 174, 0.4);
 }
 
 .titularseccion {
@@ -73,18 +156,10 @@ li {
   position: absolute;
   background: #0ed5ae;
   height: 5px;
-  content: '';
+  content: "";
   width: 100%;
   bottom: -4px;
   left: 0;
-}
-
-.destacados div:nth-child(odd) {
-  /*padding-left: 0;*/
-}
-
-.destacados div:nth-child(even) {
-  /*padding-right: 0;*/
 }
 
 .marca {
@@ -116,7 +191,7 @@ li {
   display: inline-block;
   text-align: center;
   transform: skewX(-18deg);
-  display: none
+  display: none;
 }
 
 .beneficios h4 {
@@ -181,7 +256,7 @@ li {
 
 .seccionesinternas span {
   border-bottom: 3px solid #d8d8d8;
-  margin: 5px
+  margin: 5px;
 }
 
 .seccionesinternas #name {
@@ -210,13 +285,13 @@ li {
 .break-1,
 .break-2,
 .break-3 {
-  padding: 0
+  padding: 0;
 }
 
 #logo,
 #local {
   display: table;
-  padding: 0
+  padding: 0;
 }
 
 #logo .img,
@@ -233,7 +308,7 @@ li {
 
 #logo .img img {
   text-align: center;
-  max-width: 100%
+  max-width: 100%;
 }
 
 #local {
@@ -264,7 +339,7 @@ li {
   background-color: #0ed5ae;
   transform: skewX(-18deg);
   display: inline-block;
-  transition: .4s
+  transition: 0.4s;
 }
 
 .locales .button p {
@@ -275,7 +350,7 @@ li {
   margin: 0;
   padding: 10px 20px;
   color: white;
-  text-align: center
+  text-align: center;
 }
 
 .locales .button:hover {
@@ -393,10 +468,8 @@ li {
   border-radius: 50%;
   background: #2c3e50;
   cursor: pointer;
-  transition: background .15s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
-
-.range-slider__range::-webkit-slider-thumb:hover {}
 
 .range-slider__range:active::-webkit-slider-thumb {
   background: #1abc9c;
@@ -409,7 +482,7 @@ li {
   border-radius: 50%;
   background: #2c3e50;
   cursor: pointer;
-  transition: background .15s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
 
 .range-slider__range::-moz-range-thumb:hover {
@@ -499,7 +572,6 @@ input::-moz-focus-outer {
   font-size: 1em;
   font-weight: 700;
   text-align: center;
-  text-tran
 }
 
 #categorias,
@@ -518,8 +590,6 @@ input::-moz-focus-outer {
   display: none;
   /*hide original SELECT element:*/
 }
-
-.select-selected {}
 
 .select-selected {
   background-color: white;
@@ -558,7 +628,7 @@ input::-moz-focus-outer {
   cursor: pointer;
   user-select: none;
   border-color: transparent transparent #fbfbfb transparent;
-  transition: .2s
+  transition: 0.2s;
 }
 
 .select-items {
@@ -570,7 +640,7 @@ input::-moz-focus-outer {
   z-index: 99;
   border: 2px solid #f6f6f6;
   border-color: transparent #f6f6f6 #f6f6f6 #f6f6f6;
-  box-shadow: 4px 4px 17px 0px rgba(11, 113, 93, 0.18)
+  box-shadow: 4px 4px 17px 0px rgba(11, 113, 93, 0.18);
 }
 
 .select-items div:first-child {
@@ -578,7 +648,7 @@ input::-moz-focus-outer {
 }
 
 .select-items div:last-child {
-  border: none
+  border: none;
 }
 
 /*style items (options):*/
@@ -618,7 +688,7 @@ input::-moz-focus-outer {
 }
 
 #listado table tbody tr {
-  border-bottom: 1px solid #d8d8d8
+  border-bottom: 1px solid #d8d8d8;
 }
 
 #listado table tbody #loc {
@@ -650,12 +720,12 @@ input::-moz-focus-outer {
 
 .infopuntos .volumentotal span {
   background-color: #0ed5ae;
-  max-width: 450px
+  max-width: 450px;
 }
 
 .infopuntos .volumentotal span * {
   color: white !important;
-  font-size: 1.5em
+  font-size: 1.5em;
 }
 
 .vigencia {
@@ -720,7 +790,6 @@ div.volumenpuntos span * {
   position: relative;
   display: block;
   margin: auto;
-  ;
   background-size: cover;
   background-position: center;
   transform: skew(-18deg);
@@ -732,14 +801,14 @@ div.volumenpuntos span * {
 }
 
 .desafio-mega {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 0.5px solid rgba(0, 171, 228, 0.2);
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(0, 171, 228, 0.05);
 }
 
 .desafio-marlboro {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 0.5px solid rgba(228, 0, 0, 0.3);
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(228, 0, 0, 0.1);
@@ -755,8 +824,8 @@ div.volumenpuntos span * {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  transform: skew(18deg)
+  font-family: "Open Sans", sans-serif;
+  transform: skew(18deg);
 }
 
 .desafio .icono {
@@ -776,7 +845,7 @@ div.volumenpuntos span * {
 
 .desafio-marlboro .content h3,
 .puntos-marlboro h3 {
-  color: #af3c3c
+  color: #af3c3c;
 }
 
 .desafio .content p {
@@ -807,7 +876,7 @@ div.volumenpuntos span * {
 }
 
 .desafio .puntos-desafio:after {
-  content: '';
+  content: "";
   position: absolute;
   left: -5%;
   top: 0%;
@@ -815,7 +884,7 @@ div.volumenpuntos span * {
   width: 5%;
   background: white;
   z-index: -1;
-  transition: .2s .02s ease-in all;
+  transition: 0.2s 0.02s ease-in all;
 }
 
 .desafio .puntos-desafio:hover {
@@ -828,13 +897,13 @@ div.volumenpuntos span * {
 }
 
 .desafio .span-mega {
-  background: #00ABE4;
-  box-shadow: 4px 5px 7px 0px rgba(0, 171, 228, 0.3)
+  background: #00abe4;
+  box-shadow: 4px 5px 7px 0px rgba(0, 171, 228, 0.3);
 }
 
 .desafio .span-marlboro {
   background: #bd0606;
-  box-shadow: 4px 5px 7px 0px rgba(228, 0, 0, 0.3)
+  box-shadow: 4px 5px 7px 0px rgba(228, 0, 0, 0.3);
 }
 
 .desafio .puntos-desafio p,
@@ -842,7 +911,7 @@ div.volumenpuntos span * {
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-transform: skew(18deg);
   -moz-transform: skew(18deg);
   -o-transform: skew(18deg);
@@ -887,15 +956,15 @@ div.volumenpuntos span * {
 
 .state {
   padding-bottom: 10px;
-  margin: 40px auto 0 auto !important
+  margin: 40px auto 0 auto !important;
 }
 
 .state .estados {
-  margin-left: 5%
+  margin-left: 5%;
 }
 
 .state .infopuntos {
-  border-bottom: none
+  border-bottom: none;
 }
 
 .state .content {
@@ -920,7 +989,7 @@ div.volumenpuntos span * {
 
 .infopuntos .puntos-mega span {
   background-color: white;
-  border-color: #00ABE4 !important;
+  border-color: #00abe4 !important;
 }
 
 .infopuntos .puntos-marlboro span {
@@ -991,12 +1060,12 @@ div.volumenpuntos span * {
 }
 
 .listado-meses::-webkit-scrollbar-track {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .listado-meses::-webkit-scrollbar {
   height: 6px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .listado-meses::-webkit-scrollbar-thumb {
@@ -1012,7 +1081,7 @@ div.volumenpuntos span * {
 }
 
 .listado-meses li {
-  display: inline-block
+  display: inline-block;
 }
 
 .listado-meses li a {
@@ -1024,7 +1093,7 @@ div.volumenpuntos span * {
   text-align: center;
   opacity: 0.5;
   font-weight: 700;
-  transition: .3s;
+  transition: 0.3s;
   text-decoration: none;
 }
 
@@ -1051,7 +1120,6 @@ div.volumenpuntos span * {
   padding-bottom: 30px;
 }
 
-
 /*---------
 ---CUPONES
 ----------*/
@@ -1063,7 +1131,7 @@ div.volumenpuntos span * {
   box-shadow: 3px 2px 11px 2px #b0ccc6;
   border-radius: 15px;
   margin: 20px auto;
-  transition: .3s;
+  transition: 0.3s;
   position: relative;
 }
 
@@ -1078,7 +1146,6 @@ div.volumenpuntos span * {
   clip-path: inset(0% 0% 0% 0% round 15px 15px 0 0);
   background: white;
   text-align: center;
-
 }
 
 .card-head img {
@@ -1091,7 +1158,6 @@ div.volumenpuntos span * {
   background-color: #266ea8;
   border-radius: 0 0 15px 15px;
 }
-
 
 .product-title,
 .product-price {
@@ -1136,7 +1202,6 @@ div.volumenpuntos span * {
   margin-left: 5px;
 }
 
-
 .product-properties {
   width: 100%;
   position: relative;
@@ -1156,7 +1221,7 @@ div.volumenpuntos span * {
   box-shadow: 7px 5px 12px 0px #0ed5ae69;
   left: 0;
   right: 0;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 10;
   top: -10px;
   width: fit-content;
@@ -1176,25 +1241,24 @@ div.volumenpuntos span * {
 }
 
 .product-button a {
-  transition: .6s;
+  transition: 0.6s;
   bottom: -30px;
 }
 
 .card:hover .product-button a {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
-
 
 .card-body a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   background-color: #266ea8;
   display: block;
   padding: 10px 14px;
   font-size: 16px;
   border-radius: 3px;
-  transition: .5s;
+  transition: 0.5s;
   font-weight: 600;
   border-radius: 0 0 10px 10px;
 }
@@ -1217,12 +1281,12 @@ div.volumenpuntos span * {
   margin: auto;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .searchfield {
     margin: 0 auto 10px;
   }
 
-  .searchfield input[type=text] {
+  .searchfield input[type="text"] {
     width: 100%;
   }
 
@@ -1242,7 +1306,7 @@ div.volumenpuntos span * {
   }
 
   .destacados div {
-    padding: 5px !important
+    padding: 5px !important;
   }
 
   .destacados .shape {
@@ -1257,7 +1321,7 @@ div.volumenpuntos span * {
   }
 
   .marca {
-    padding: 0 !important
+    padding: 0 !important;
   }
 
   .titularseccion p {
@@ -1267,7 +1331,7 @@ div.volumenpuntos span * {
   .titularseccion p::before {
     height: 4px;
     bottom: -4px;
-    width: 100%
+    width: 100%;
   }
 
   .marca-in {
@@ -1275,16 +1339,16 @@ div.volumenpuntos span * {
   }
 
   .break-1 {
-    padding-right: 15px
+    padding-right: 15px;
   }
 
   .break-2 {
-    padding-left: 15px
+    padding-left: 15px;
   }
 
   .redimir button,
   .volver button {
-    width: 25%
+    width: 25%;
   }
 
   .range-slider {
@@ -1342,7 +1406,7 @@ div.volumenpuntos span * {
   }
 
   #confirmacion .modal-footer button {
-    font-size: 1.2em
+    font-size: 1.2em;
   }
 
   .volver button {
@@ -1379,202 +1443,201 @@ div.volumenpuntos span * {
   .disclaim {
     margin-top: 0;
   }
+}
 
-
-
-  @media screen and (min-width:1200px) {
-    .searchfield input[type=text] {
-      width: 25%;
-    }
-
-    .searchfield input[type=text]:focus {
-      width: 100%
-    }
-
-    .marcas {
-      float: right;
-    }
-
-    .destacados .shape .sale {
-      height: 5.5rem;
-      width: 5.5rem;
-      line-height: 5.5rem;
-    }
-
-    .destacados .shape .sale p {
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .infopuntos h3 {
-      font-size: 1.3em;
-      text-align: right;
-      padding-right: 20px;
-    }
-
-    .puntos span p {
-      font-size: 1.4em;
-    }
-
-    .titularseccion p {
-      font-size: 1.3em;
-    }
-
-    .titularseccion p::before {
-      height: 6px;
-      bottom: -5px;
-      width: 100%
-    }
-
-    .beneficios h4 {
-      font-size: 1.4em;
-    }
-
-    .marca-in {
-      margin-bottom: 30px !important;
-      padding-bottom: 30px;
-    }
-
-    .seccionesinternas p {
-      font-size: 1.3em;
-    }
-
-    .locales p,
-    .locales .button p {
-      font-size: 20px;
-    }
-
-    #categorias,
-    #marcas,
-    #provincias,
-    #localidades {
-      font-size: 1em;
-    }
-
-    .rowpuntos {
-      margin-top: 20px;
-    }
-
-    .bases,
-    .terminos {
-      padding: 0 !important;
-    }
-
-    .bases {
-      font-size: 1.2em;
-      height: 39px;
-      position: relative
-    }
-
-    .terminos {
-      position: absolute;
-      bottom: 0px
-    }
-
-    .redimir button,
-    .volver button {
-      font-weight: 400;
-      font-size: 1.3em;
-      width: 50%;
-      display: table;
-      margin-left: auto
-    }
-
-    .volver button {
-      width: 25%;
-      font-size: 1em;
-    }
-
-    .redimir button p,
-    .volver button p {
-      font-size: 1.2em;
-    }
-
-    #confirmacion .modal-body {
-      font-size: 1.4em;
-    }
-
-    #confirmacion .modal-footer button {
-      font-size: 1.4em
-    }
-
-    #listado .backdesk {
-      display: block
-    }
-
-    .backres {
-      display: none
-    }
-
-    /*--------------------------------
-  ************ DESAFIOS ************
-  ---------------------------------*/
-    .listado-meses {
-      width: 600px;
-    }
-
-    .volumenpuntos span h3 {
-      font-size: 1em;
-      padding-right: 0;
-    }
-
-    /*--------------------------------
-    ************ CUPONES ************
-    ---------------------------------*/
-    .card-head img {
-      height: 199px;
-    }
-
-    .card-body {
-      border-radius: 0px 0px 15px 15px;
-    }
-
-    .card-body a {
-      font-size: 18px;
-      padding: 14px;
-    }
-
-    .product-properties {
-      min-height: 25px
-    }
-
-    .product-points {
-      padding: 7px 16px;
-      font-size: 24px;
-    }
-
-    .product-title,
-    .product-price {
-      font-size: 17px
-    }
-
-    .product-title h4 {
-      margin-bottom: 0;
-    }
-
-    .product-title p {
-      font-size: 12px;
-      -webkit-line-clamp: 3;
-      margin-bottom: 0;
-    }
-
-    .product-button {
-      padding: 20px 0;
-    }
-
-    .product-button a {
-      padding: 7px 24px;
-      font-size: 16px
-    }
-
-    .product-button .canjear {
-      bottom: 15px;
-    }
-
-    /*** INTERNA CUPON ***/
-    .puntos span {
-      height: 44px;
-      min-width: 120px;
-      text-align: center;
-    }
+@media screen and (min-width: 1200px) {
+  .searchfield input[type="text"] {
+    width: 25%;
   }
+
+  .searchfield input[type="text"]:focus {
+    width: 100%;
+  }
+
+  .marcas {
+    float: right;
+  }
+
+  .destacados .shape .sale {
+    height: 5.5rem;
+    width: 5.5rem;
+    line-height: 5.5rem;
+  }
+
+  .destacados .shape .sale p {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .infopuntos h3 {
+    font-size: 1.3em;
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  .puntos span p {
+    font-size: 1.4em;
+  }
+
+  .titularseccion p {
+    font-size: 1.3em;
+  }
+
+  .titularseccion p::before {
+    height: 6px;
+    bottom: -5px;
+    width: 100%;
+  }
+
+  .beneficios h4 {
+    font-size: 1.4em;
+  }
+
+  .marca-in {
+    margin-bottom: 30px !important;
+    padding-bottom: 30px;
+  }
+
+  .seccionesinternas p {
+    font-size: 1.3em;
+  }
+
+  .locales p,
+  .locales .button p {
+    font-size: 20px;
+  }
+
+  #categorias,
+  #marcas,
+  #provincias,
+  #localidades {
+    font-size: 1em;
+  }
+
+  .rowpuntos {
+    margin-top: 20px;
+  }
+
+  .bases,
+  .terminos {
+    padding: 0 !important;
+  }
+
+  .bases {
+    font-size: 1.2em;
+    height: 39px;
+    position: relative;
+  }
+
+  .terminos {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .redimir button,
+  .volver button {
+    font-weight: 400;
+    font-size: 1.3em;
+    width: 50%;
+    display: table;
+    margin-left: auto;
+  }
+
+  .volver button {
+    width: 25%;
+    font-size: 1em;
+  }
+
+  .redimir button p,
+  .volver button p {
+    font-size: 1.2em;
+  }
+
+  #confirmacion .modal-body {
+    font-size: 1.4em;
+  }
+
+  #confirmacion .modal-footer button {
+    font-size: 1.4em;
+  }
+
+  #listado .backdesk {
+    display: block;
+  }
+
+  .backres {
+    display: none;
+  }
+
+  /*--------------------------------
+************ DESAFIOS ************
+---------------------------------*/
+  .listado-meses {
+    width: 600px;
+  }
+
+  .volumenpuntos span h3 {
+    font-size: 1em;
+    padding-right: 0;
+  }
+
+  /*--------------------------------
+  ************ CUPONES ************
+  ---------------------------------*/
+  .card-head img {
+    height: 199px;
+  }
+
+  .card-body {
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .card-body a {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .product-properties {
+    min-height: 25px;
+  }
+
+  .product-points {
+    padding: 7px 16px;
+    font-size: 24px;
+  }
+
+  .product-title,
+  .product-price {
+    font-size: 17px;
+  }
+
+  .product-title h4 {
+    margin-bottom: 0;
+  }
+
+  .product-title p {
+    font-size: 12px;
+    -webkit-line-clamp: 3;
+    margin-bottom: 0;
+  }
+
+  .product-button {
+    padding: 20px 0;
+  }
+
+  .product-button a {
+    padding: 7px 24px;
+    font-size: 16px;
+  }
+
+  .product-button .canjear {
+    bottom: 15px;
+  }
+
+  /*** INTERNA CUPON ***/
+  .puntos span {
+    height: 44px;
+    min-width: 120px;
+    text-align: center;
+  }
+}
