@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=10; IE=11; IE=EDGE">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Go Open</title>
+</head>
+
+<body class="cumpleaños">
+
+
+
+  <!-- IFRAME GIFTCARD -->
+  <section class="container productos">
+
+
+    <div class="col-12">
+        <div class="col-12">
+            <img class="banner" src="images/banner_mercadopago.png" alt="">
+        </div>
+      <div class="titularseccion">
+        <p>MERCADOPAGO</p>
+
+      </div>
+
+        <p class="subtitle" col-6>Selecciona un monto para canjear. 
+            Antes de canjear tus puntos es necesario contar con una cuenta en MercadoPago</p>
+
+
+    <div class="row buscadores">
+
+
+      <div id="categorias" class="col-xs-12 col-sm-6 col-lg-3">
+        <div class="custom-select">
+          <select>
+            <option selected disabled>Categor&iacute;as</option>
+            <option value="0">Todas</option>
+            <option value="1">Belleza y Cuidado Personal</option>
+            <option value="2">Calzado y Marroquiner&iacute;a</option>
+            <option value="3">Deporte y Outdoor</option>
+            <option value="4">Gastronom&iacute;a</option>
+            <option value="5">Hogar, Deco y Electro</option>
+            <option value="6">Joyer&iacute;a</option>
+            <option value="7">Moda Femenina</option>
+            <option value="8">Moda Masculina</option>
+            <option value="9">Moda Ni&ntilde;os</option>
+            <option value="10">Moda Unisex</option>
+            <option value="11">Multimarca</option>
+            <option value="12">&Oacute;ptica</option>
+            <option value="13">Vinoteca</option>
+          </select>
+        </div>
+      </div>
+     
+
+    
+
+      </div>
+    </div>
+
+
+
+    <div class="col-xs-6 col-sm-3">
+        <div class="marca" >
+
+    
+                        <img id="tarjeta500"  src="images/mercadopagocard1.png" alt="Aral Sports">
+                     
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+          <div class="marca">
+              
+       
+                          <img id="tarjeta1000"  src="images/mercadopagocard2.png" alt="Aral Sports">
+                           
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-3">
+            <div class="marca" >
+              
+
+                            <img id="tarjeta2000" class="selected"  src="images/mercadopagocard3.png" alt="Aral Sports">
+                                   
+            </div>
+          </div>
+
+<div>
+          <div class="col-xs-12 col-md-6 puntos" style="margin-top: 40px; display: flex; flex-direction: row; justify-content: space-between">
+                  <h3>Puntos disponibles </h3><span id="valor"><p>4500</p></span>
+          </div>
+          <div class="col-xs-12 col-md-6 redimir" style="margin-top: 40px">
+              <button class="newbutton" onclick="openModal()" ><p>Canjear</p></button>
+            </div>
+          </div>
+  </section>
+  
+  <!-- FIN GIFTCARD -->
+
+
+
+  <!-- modal paso 1 -->
+
+
+  <div id="confirmacion" class="modal fade newmodal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <i class="fa fa-exclamation" aria-hidden="true"></i>
+              </div>
+              <div class="modal-body">
+<img src="images/mercadopagologo.png" alt="">
+<p class="text">Antes de canjear es necesario tener 
+    una cuenta de Mercadopago</p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary newbutton"><p>Ya tengo una cuenta</p></button>
+                  <button type="button" class="btn btn-primary newbutton" style="background-color: #266ea8" data-dismiss="modal"><p>Crear una ahora</p></button>
+  
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+  <!-- modal paso 2 -->
+
+
+ <!-- <div id="confirmacion" class="modal fade newmodal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <i class="fa fa-exclamation" aria-hidden="true"></i>
+              </div>
+              <div class="modal-body">
+<img src="images/mercadopagologo.png" alt="">
+<p class="text">¡Felicidades!</p>
+<p class="greytext">Para cargar el saldo ingresa este 
+    codigo en tu cuenta de Mercadopago</p>
+    
+    <div class="mercadopago-code">
+      <p>asdjk123hn</p>
+      <div class="button-line">
+      <div class="line"></div>
+      <a href="#">Copiar</a>
+    </div>
+    </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary newbutton"><p>Cargar ahora</p></button>
+                  <button type="button" class="btn btn-default newbutton"  data-dismiss="modal"><p>Hacerlo mas tarde</p></button>
+  
+              </div>
+          </div>
+      </div>
+    </div>   -->
+
+
+      <!-- modal paso 3 -->
+
+
+      <!-- <div id="confirmacion" class="modal fade newmodal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <i class="fa fa-exclamation" aria-hidden="true"></i>
+              </div>
+              <div class="modal-body">
+<img src="images/mercadopagologo.png" alt="">
+<p class="text">¿Donde lo encuentro?</p>
+<p class="greytext">Podes encontrarlo en la seccion
+    de mi historial</p>
+    
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary newbutton"><p>Canjear mas premios</p></button>
+  
+              </div>
+          </div>
+      </div>
+    </div> 
+ -->
+
+
+
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/events.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

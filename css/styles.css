@@ -1616,3 +1616,284 @@ div.volumenpuntos span * {
 .modal-sin-audiencia .modal-dialog .modal-content .modal-footer {
   margin-bottom: 20px;
 }
+
+.marca {
+  position: relative;
+  padding: 15px 0 !important;
+}
+
+.marca img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.discount-pill {
+  background-color: #E23731;
+  display: block;
+  width: auto;
+  padding: 4px 11px;
+  height: 31px;
+  border-radius: 19px;
+  position: absolute;
+  top: 1px;
+  left: -13px;
+}
+
+.discount-pill i{
+color: white;
+display: inline-block
+}
+
+
+.discount-pill p {
+display: inline-block;
+font-weight: 700;
+color: white;
+font-size: 13px;
+}
+
+.banner {
+  width: 100%
+}
+
+.cumpleaños {
+  background-image: url(../images/background-cumpleaños.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+
+}
+
+.separator hr{
+width: 40%
+}
+
+.separator p {
+  display: inline-block;
+color: #00ABE4
+}
+
+.card-historial {
+  height: 123px;
+  background-color: #F8F8F8;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  padding: 20px 15px 15px 15px;
+  display: flex;
+  flex-direction:row;
+  position: relative;
+  align-items: center;
+
+}
+
+.card-historial img {
+  border-radius: 10px;
+  height: 90px;
+}
+
+.card-historial .data .name {
+  color: #266ea8;
+  font-weight: bold;
+
+  margin: 0 0 5px 20px;
+
+}
+
+.card-historial  .type {
+position: absolute;
+right: 10px;
+top: 10px;
+color: #266ea8;
+font-weight: bold;
+font-size: 10px;
+}
+
+.card-historial .data .points {
+  color: #0ed5ae;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin: 0 0 5px 20px;
+
+
+}
+
+.card-historial .data .points span{
+  color: #266ea8;
+  font-weight: normal;
+  font-size: 12px;
+
+}
+
+.card-historial .data .fecha {
+  margin: 0 0 10px 20px;
+  color: #999;
+  font-size: 13px;
+
+}
+
+.card-historial .mercadopago-code {
+  margin: 0 0 10px 20px;
+  color: #535353;
+  font-weight: bold;
+  font-size: 12px
+}
+
+.card-historial .mercadopago-code span{
+  margin: 0 0 10px 20px;
+  color: #F8AA00;
+  font-weight: normal;
+  font-size: 12px;
+  margin: 0
+}
+
+ .subtitle {
+  color:  #606060;
+  font-size: 14px;
+  margin-top:10px;
+}
+
+.selected {
+  border: 1px solid #266ea8;
+  padding: 6px;
+}
+
+.mercadopago-canje {
+  display: flex;
+  flex-direction: row;
+}
+
+.mercadopago-canje .puntos{
+  width: 50%;
+  margin: 0
+}
+
+.newmodal i{
+  color: #b5b5b5;
+  font-size: 20px;
+}
+
+.newmodal img {
+  width: 40%;
+  margin-bottom: 15px;
+}
+
+.newmodal .modal-content {
+  border-radius: 15px
+}
+
+.text {
+font-weight: bold;
+font-size: 16px;
+text-align: center;
+color: #266ea8;
+width: 70%;
+margin: auto
+}
+
+.newmodal .greytext {
+  color: #606060;
+  font-size: 12px;
+  width: 60%;
+  font-weight: 400;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.newmodal .modal-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.newmodal .modal-footer .newbutton {
+  transform: unset;
+  border-radius: 20px;
+  padding: 10px 25px;
+  max-width: 250px;
+
+  margin: 6px auto
+
+}
+
+.newmodal .modal-footer .newbutton p{
+font-size: 16px;
+transform: unset;
+}
+
+
+.newmodal .mercadopago-code {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+background-color: rgb(236, 236, 236);
+border-radius: 10px;
+margin-top: 25px;
+padding: 10px;
+
+}
+
+.newmodal .mercadopago-code p{
+font-weight: 400;
+color: #266ea8;
+font-size: 16px;
+margin-bottom: 0;
+}
+
+.newmodal .mercadopago-code a{
+  font-weight: 700;
+color: #F8AA00;
+font-size: 18px;
+    
+  }
+
+  .newmodal .mercadopago-code .line {
+    width: 1px;
+    height: 20px;
+    background-color: #606060;
+    margin: 0 15px;
+  }
+
+  .button-line {
+    display: flex;
+    align-items: center;
+  }
+
+  .redimir .newbutton {
+    transform: unset;
+    border-radius: 20px;
+    padding: 10px 25px;
+    max-width: 250px;
+  
+    margin: 6px auto
+  
+  }
+
+.redimir .newbutton p{
+    font-size: 16px;
+    transform: unset;
+    }
+
+
+
+    @media screen and (max-width:768px) {
+
+
+    .newmodal .mercadopago-code {
+      width: 92%;
+    }
+
+  }
