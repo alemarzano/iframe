@@ -1581,29 +1581,29 @@ div.volumenpuntos span * {
 
 }
 
-  .modal-sin-audiencia .modal-dialog .modal-content {
-    border-radius: 5px;
-  }
+.modal-sin-audiencia .modal-dialog .modal-content {
+  border-radius: 5px;
+}
 
-  .modal-sin-audiencia .modal-dialog .modal-content h3 {
-    color: #268cb1;
-    font-weight: 600;
-    margin-top: 0;
-  }
+.modal-sin-audiencia .modal-dialog .modal-content h3 {
+  color: #268cb1;
+  font-weight: 600;
+  margin-top: 0;
+}
 
-  
-  .modal-sin-audiencia .modal-dialog .modal-content p {
-    font-size: 18px;
-    color: #999;
-    font-weight: 400;
-  }
 
-  .modal-sin-audiencia .modal-dialog .modal-content h2 {
-    color: #0ed5ae;
-    font-weight: 600;
-  }
+.modal-sin-audiencia .modal-dialog .modal-content p {
+  font-size: 18px;
+  color: #999;
+  font-weight: 400;
+}
 
-  .modal-sin-audiencia .modal-dialog .modal-content .canjear {
+.modal-sin-audiencia .modal-dialog .modal-content h2 {
+  color: #0ed5ae;
+  font-weight: 600;
+}
+
+.modal-sin-audiencia .modal-dialog .modal-content .canjear {
   background-color: #0ed5ae;
   padding: 5px 65px;
   color: white;
@@ -1642,17 +1642,17 @@ div.volumenpuntos span * {
   left: -13px;
 }
 
-.discount-pill i{
-color: white;
-display: inline-block
+.discount-pill i {
+  color: white;
+  display: inline-block
 }
 
 
 .discount-pill p {
-display: inline-block;
-font-weight: 700;
-color: white;
-font-size: 13px;
+  display: inline-block;
+  font-weight: 700;
+  color: white;
+  font-size: 13px;
 }
 
 .banner {
@@ -1674,13 +1674,13 @@ font-size: 13px;
 
 }
 
-.separator hr{
-width: 40%
+.separator hr {
+  width: 40%
 }
 
 .separator p {
   display: inline-block;
-color: #00ABE4
+  color: #00ABE4
 }
 
 .card-historial {
@@ -1690,7 +1690,7 @@ color: #00ABE4
   margin: 15px 0;
   padding: 20px 15px 15px 15px;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   position: relative;
   align-items: center;
 
@@ -1709,13 +1709,13 @@ color: #00ABE4
 
 }
 
-.card-historial  .type {
-position: absolute;
-right: 10px;
-top: 10px;
-color: #266ea8;
-font-weight: bold;
-font-size: 10px;
+.card-historial .type {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #266ea8;
+  font-weight: bold;
+  font-size: 10px;
 }
 
 .card-historial .data .points {
@@ -1728,7 +1728,7 @@ font-size: 10px;
 
 }
 
-.card-historial .data .points span{
+.card-historial .data .points span {
   color: #266ea8;
   font-weight: normal;
   font-size: 12px;
@@ -1749,7 +1749,7 @@ font-size: 10px;
   font-size: 12px
 }
 
-.card-historial .mercadopago-code span{
+.card-historial .mercadopago-code span {
   margin: 0 0 10px 20px;
   color: #F8AA00;
   font-weight: normal;
@@ -1757,10 +1757,10 @@ font-size: 10px;
   margin: 0
 }
 
- .subtitle {
-  color:  #606060;
+.subtitle {
+  color: #606060;
   font-size: 14px;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .selected {
@@ -1773,12 +1773,12 @@ font-size: 10px;
   flex-direction: row;
 }
 
-.mercadopago-canje .puntos{
+.mercadopago-canje .puntos {
   width: 50%;
   margin: 0
 }
 
-.newmodal i{
+.newmodal i {
   color: #b5b5b5;
   font-size: 20px;
 }
@@ -1793,12 +1793,12 @@ font-size: 10px;
 }
 
 .text {
-font-weight: bold;
-font-size: 16px;
-text-align: center;
-color: #266ea8;
-width: 70%;
-margin: auto
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #266ea8;
+  width: 70%;
+  margin: auto
 }
 
 .newmodal .greytext {
@@ -1823,12 +1823,11 @@ margin: auto
   max-width: 250px;
 
   margin: 6px auto
-
 }
 
-.newmodal .modal-footer .newbutton p{
-font-size: 16px;
-transform: unset;
+.newmodal .modal-footer .newbutton p {
+  font-size: 16px;
+  transform: unset;
 }
 
 
@@ -1839,61 +1838,115 @@ transform: unset;
   justify-content: space-between;
   align-items: center;
   margin: auto;
-background-color: rgb(236, 236, 236);
-border-radius: 10px;
-margin-top: 25px;
-padding: 10px;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 10px;
 
 }
 
-.newmodal .mercadopago-code p{
-font-weight: 400;
-color: #266ea8;
-font-size: 16px;
-margin-bottom: 0;
+.newmodal .mercadopago-code p {
+  font-weight: 400;
+  color: #266ea8;
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
-.newmodal .mercadopago-code a{
+.newmodal .mercadopago-code a {
   font-weight: 700;
-color: #F8AA00;
-font-size: 18px;
-    
+  color: #F8AA00;
+  font-size: 18px;
+
+}
+
+.newmodal .mercadopago-code .line {
+  width: 1px;
+  height: 20px;
+  background-color: #606060;
+  margin: 0 15px;
+}
+
+.button-line {
+  display: flex;
+  align-items: center;
+}
+
+.redimir .newbutton {
+  transform: unset;
+  border-radius: 20px;
+  padding: 10px 25px;
+  max-width: 250px;
+
+  margin: 6px auto
+}
+
+.redimir .newbutton p {
+  font-size: 16px;
+  transform: unset;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+
+  .newmodal .mercadopago-code {
+    width: 92%;
   }
 
-  .newmodal .mercadopago-code .line {
-    width: 1px;
-    height: 20px;
-    background-color: #606060;
-    margin: 0 15px;
-  }
+}
 
-  .button-line {
-    display: flex;
-    align-items: center;
-  }
+.button-container {
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+}
 
-  .redimir .newbutton {
-    transform: unset;
-    border-radius: 20px;
-    padding: 10px 25px;
-    max-width: 250px;
+.button-historial {
+  width: 250px;
+  background: #FFFFFF;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 15px 0;
+  justify-self: flex-end;
   
-    margin: 6px auto
+}
+
+
+
+.button-historial div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px
+}
+
+.button-historial p {
+  margin-bottom: 0;
+  color: #266ea8;
+
+}
+
+
+.button-historial .history {
+  color: #266ea8
+}
+
+.button-historial .fa-chevron-right {
+color: #606060;
+font-weight: 12px
+}
+
+
+.button-home {
+  width: 200px;
+
   
-  }
+}
 
-.redimir .newbutton p{
-    font-size: 16px;
-    transform: unset;
-    }
+.button-home div{
+ justify-content: space-around
 
-
-
-    @media screen and (max-width:768px) {
-
-
-    .newmodal .mercadopago-code {
-      width: 92%;
-    }
-
-  }
+  
+}
