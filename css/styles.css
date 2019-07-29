@@ -1662,7 +1662,7 @@ div.volumenpuntos span * {
 .cumpleaños {
   background-image: url(../images/background-cumpleaños.png);
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .separator {
@@ -1890,9 +1890,15 @@ div.volumenpuntos span * {
 @media screen and (max-width:768px) {
 
 
+  .cumpleaños {
+    background-position: center center;
+  }
+
+
   .newmodal .mercadopago-code {
     width: 92%;
   }
+
 
 }
 
@@ -1948,5 +1954,23 @@ font-weight: 12px
 .button-home div{
  justify-content: space-around
 
+}
+
+.no-desk {
+  display: none !important;
+}
+
+
+
+@media screen and (max-width:608px) {
+
+  .no-desk {
+    display: block !important;
+  }
+
+  .no-mob {
+    display: none !important;
+  
+  }  
   
 }
