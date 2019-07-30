@@ -361,6 +361,7 @@ li {
 
 .rowslide {
   margin: 0;
+  background-color: #ececec
 }
 
 .range {
@@ -370,7 +371,7 @@ li {
 .range-slider {
   margin: 10px 0;
   width: 100%;
-  padding: 0 !important;
+  padding: 12px !important;
 }
 
 /* .range-slider .row{ padding:0!important;} */
@@ -1217,6 +1218,14 @@ div.volumenpuntos span * {
   margin: auto;
 }
 
+
+.range-slider {
+  background-color: #ececec;
+  height: 390x;
+}
+
+
+
 @media screen and (min-width:768px) {
   .searchfield {
     margin: 0 auto 10px;
@@ -1272,6 +1281,7 @@ div.volumenpuntos span * {
 
   .marca-in {
     border-bottom: 2px solid #ececec;
+    height: 443px;
   }
 
   .break-1 {
@@ -1325,6 +1335,7 @@ div.volumenpuntos span * {
 
   .range-slider {
     margin: 0;
+    height: 409px;
   }
 
   .redimir,
@@ -1972,5 +1983,65 @@ font-weight: 12px
     display: none !important;
   
   }  
+
+  .range-slider {
+    height: 390px;
+  }
   
+  
+}
+
+.discount_price {
+  color: #E23731 !important
+}
+
+
+.pesos .discount-pill {
+
+  top: -21px;
+  left: -21px;
+  transform: skewX(18deg);
+}
+
+.title-puntos {
+  display: inline-block;
+  margin: 0 5px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #266ea8;
+  text-transform: uppercase;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.old-price {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #246FA9;
+  margin-top: 25px
+}
+
+.old-price span{
+  color: #E23731;
+  font-weight: normal;
+
+}
+
+.old-price-aclaration {
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 12px;
+  text-align: center;
+  color: #606060;
+}
+
+
+@media screen and (max-width:408px) {
+  .range-slider {
+    height: 444px;
+}
 }
