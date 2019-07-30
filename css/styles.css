@@ -1651,6 +1651,7 @@ div.volumenpuntos span * {
   position: absolute;
   top: 1px;
   left: -13px;
+  z-index: 99;
 }
 
 .discount-pill i {
@@ -2044,4 +2045,9 @@ font-weight: 12px
   .range-slider {
     height: 444px;
 }
+}
+
+
+.sin-stock {
+  filter: grayscale(.95)
 }
