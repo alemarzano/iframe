@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Catalogo Go Open</title>
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/modal.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+   <button onclick="MicroModal.show('modal-1')">Modal seleccionar provincia</button>
+
+   <button onclick="MicroModal.show('modal-3')">Modal aviso fuera de provincia</button>
+
+   <button onclick="MicroModal.show('modal-4')">Modal puntos insuficientes</button>
+
+   <button onclick="MicroModal.show('modal-5')">Modal canje</button>
+
+<!--Seleccioná tu provincia --- MODAL 1-->
+   <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+         <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+           <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+             <header class="modal__header">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+               <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+             </header>
+
+
+             <main class="modal__content" id="modal-1-content">
+               <p class="blue-500 text-medium-b m-b-16 text-center">Seleccioná tu provincia</p>
+               <select name="provincia">
+                     <option value="mendoza ">Mendoza</option>
+                     <option value="buenosaires">Buenos Aires</option>
+
+               </select>
+             </main>
+
+
+             <footer class="modal__footer">
+               <button class="button bg-green white" onclick="MicroModal.close('modal-1'); MicroModal.show('modal-2')">Seleccionar</button>
+             </footer>
+           </div>
+         </div>
+       </div>
+<!--Seleccioná tu provincia --- MODAL 1-->
+
+<!--Seleccioná tu provincia --- MODAL 2 -->
+<div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="blue-500 text-medium-b m-b-16 text-center">Seleccionaste</p>
+               <p class="green-500 text-medium-b text-center">Mendoza</p>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-green white" onclick="MicroModal.close('modal-2')">Continuar</button>
+            <button class="minimal-button text-medium-b grey-500 m-t-24" onclick="MicroModal.close('modal-2'); MicroModal.show('modal-1')">Volver a seleccionar</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+<!--Seleccioná tu provincia --- MODAL 2-->
+
+
+
+<!-- aviso fuera de provincia -->
+<div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="blue-500 text-medium-b  text-center">Estas a punto de canjear una Gift Card que no se encuentra disponible en tu provincia</p>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-green white" onclick="MicroModal.close('modal-3')">Continuar</button>
+            <button class="minimal-button text-medium-b grey-500 m-t-24" onclick="MicroModal.close('modal-3');">Seleccionar otra Gift Card</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+<!-- aviso fuera de provincia-->
+
+
+
+<!-- puntos insuficientes -->
+<div class="modal micromodal-slide" id="modal-4" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="red-500 text-medium-b  text-center">No tenés puntos suficientes
+                     para canjear este premio.</p>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-green white" onclick="MicroModal.close('modal-4')">Volver</button>
+            <button class="minimal-button text-medium-b grey-500 m-t-24" onclick="MicroModal.close('modal-4'); ">Seleccionar otro monto</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+<!-- puntos insuficientes-->
+
+
+
+
+<!-- canje modal-1-->
+
+
+<div class="modal micromodal-slide" id="modal-5" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+               <p class="grey-400 text-small">1/4</p>
+             <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="blue-500 text-medium-b  text-center m-b-16">Por favor seleccioná la localidad en la que queres canjear el producto.</p>
+               <select name="provincia">
+                     <option value="mendoza ">Mendoza</option>
+                     <option value="buenosaires">Buenos Aires</option>
+
+               </select>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-green white" onclick="MicroModal.close('modal-5'); MicroModal.show('modal-6')">Siguiente</button>
+            <button class="minimal-button text-medium-b grey-500 m-t-24" onclick="MicroModal.close('modal-5'); ">Seleccionar otra giftcardo</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+<!-- canje modal-1-->
+
+
+
+
+
+
+
+<!-- canje modal-2-->
+
+
+<div class="modal micromodal-slide" id="modal-6" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+               <p class="grey-400 text-small">2/4</p>
+             <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="blue-500 text-medium-b m-b-16 text-center">Estas a punto de intercambiar </p>
+               <p class="green-500 text-medium-b text-center">8000 puntos</p>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-green white" onclick="MicroModal.close('modal-6'); MicroModal.show('modal-7')">Siguiente</button>
+            <button class="minimal-button text-medium-b grey-500 m-t-24" onclick="MicroModal.close('modal-6'); ">Seleccionar otro monto</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+<!-- canje modal-2-->
+
+
+
+
+<!-- canje modal-3-->
+
+
+<div class="modal micromodal-slide" id="modal-7" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+               <p class="grey-400 text-small">3/4</p>
+             <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="blue-500 text-medium-b m-b-16 text-center">Se enviara el comprobante a <br> <span class="text-medium-b">pedrorojas@hotmail.com</span> </p>
+               <p class="grey-500 text-small text-center">Si este ya no es tu email podes cambiár tu email desde el perfil y realizá nuevamente los pasos. Si cambiás el email, cambiará tu email de usuario. </p>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-green white" onclick="MicroModal.close('modal-7'); MicroModal.show('modal-8')">Siguiente</button>
+            <button class="minimal-button text-medium-b grey-500 m-t-24" onclick="MicroModal.close('modal-7'); ">Seleccionar otro monto</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+<!-- canje modal-3-->
+
+
+
+<!-- canje modal-4 (solo carrefour)-->
+
+
+<div class="modal micromodal-slide" id="modal-8" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+               <p class="grey-400 text-small">4/4</p>
+             <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="blue-500 text-medium-b m-b-16 text-center">Esta Gift Card tardará en llegar a tu email aproximadamente </p>
+               <p class="green-500 text-medium-b text-center">10 días</p>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-green white" onclick="MicroModal.close('modal-8'); MicroModal.show('modal-9')">Canjear</button>
+            <button class="minimal-button text-medium-b grey-500 m-t-24" onclick="MicroModal.close('modal-8'); ">Cambiar Gift Card</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+<!-- canje modal-4-->
+
+
+
+<!-- canje cajne final-->
+
+
+<div class="modal micromodal-slide" id="modal-9" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+          <header class="modal__header">
+             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNCA3My41QzI0IDQ2LjcxNDIgNDUuOTM4IDI1IDczIDI1QzEwMC4wNjIgMjUgMTIyIDQ2LjcxNDIgMTIyIDczLjVDMTIyIDEwMC4yODYgMTAwLjA2MiAxMjIgNzMgMTIyQzQ1LjkzOCAxMjIgMjQgMTAwLjI4NiAyNCA3My41Wk03MyAzMy44MTgyQzUwLjg1ODQgMzMuODE4MiAzMi45MDkxIDUxLjU4NDMgMzIuOTA5MSA3My41QzMyLjkwOTEgOTUuNDE1NyA1MC44NTg0IDExMy4xODIgNzMgMTEzLjE4MkM5NS4xNDE2IDExMy4xODIgMTEzLjA5MSA5NS40MTU3IDExMy4wOTEgNzMuNUMxMTMuMDkxIDUxLjU4NDMgOTUuMTQxNiAzMy44MTgyIDczIDMzLjgxODJaTTczIDUxLjQ1NDVDNzUuNDYwMiA1MS40NTQ1IDc3LjQ1NDUgNTMuNDI4NiA3Ny40NTQ1IDU1Ljg2MzZWNzMuNUM3Ny40NTQ1IDc1LjkzNTEgNzUuNDYwMiA3Ny45MDkxIDczIDc3LjkwOTFDNzAuNTM5OCA3Ny45MDkxIDY4LjU0NTUgNzUuOTM1MSA2OC41NDU1IDczLjVWNTUuODYzNkM2OC41NDU1IDUzLjQyODYgNzAuNTM5OCA1MS40NTQ1IDczIDUxLjQ1NDVaTTczIDk1LjU0NTVDNzUuNDYwMiA5NS41NDU1IDc3LjQ1NDUgOTMuNTcxNCA3Ny40NTQ1IDkxLjEzNjRDNzcuNDU0NSA4OC43MDEzIDc1LjQ2MDIgODYuNzI3MyA3MyA4Ni43MjczQzcwLjUzOTggODYuNzI3MyA2OC41NDU1IDg4LjcwMTMgNjguNTQ1NSA5MS4xMzY0QzY4LjU0NTUgOTMuNTcxNCA3MC41Mzk4IDk1LjU0NTUgNzMgOTUuNTQ1NVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt="">
+               <p class="grey-400 text-small">4/4</p>
+             <button class="modal__close" aria-label="Close modal" data-micromodal-close> <img data-micromodal-close src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4=" alt=""></button>
+          </header>
+
+
+          <main class="modal__content" id="modal-1-content">
+               <p class="green-500 text-medium-b m-b-16 text-center">¡Felicitaciones! <br>
+                     Canjeaste tu Gift Card
+                     con éxito</p>
+          </main>
+
+
+          <footer class="modal__footer">
+            <button class="button bg-blue white" onclick="MicroModal.close('modal-9')">Volver</button>
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+<!-- canje cajne final-->
+
+
+
+
+   <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
+
+</body>
+
+</html>
