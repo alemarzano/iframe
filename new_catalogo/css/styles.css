@@ -1137,6 +1137,10 @@ max-width: 400px;
    }
 }
 
+.cards-catalogo {
+   position: relative;
+}
+
 @media screen and (max-width: 514px) {
 
    .cards-catalogo {
@@ -1339,4 +1343,31 @@ select {
 option {
    font-size: 16px;
    color: #A3A9B4
+}
+
+.pill {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   background-color: #0ED5AE;
+   padding: 1px 20px 1px 3px;
+   border-radius: 5px 0 0 5px ;
+   width: 100px;
+   margin-top: 16px
+}
+.pill img{
+   width: 19px;
+}
+
+.dni {
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+   align-items: center;
+   justify-content: center;
+   margin: 32px auto
+}
+
+.dni input {
+   width: 70%
 }
