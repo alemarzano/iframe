@@ -1371,3 +1371,12 @@ option {
 .dni input {
    width: 70%
 }
+
+
+.pill.stock {
+   background-color: #E94464;
+   border-radius: 0 5px 5px 0;
+   justify-content: flex-end;
+
+}
+

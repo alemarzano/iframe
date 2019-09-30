@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Catalogo Go Open</title>
+   <link rel="stylesheet" href="css/styles.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+   <div class="container">
+
+
+
+      <div class="search-input">
+         <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yOSA2Ni45NzVDMjkgNDYuNTU0MyA0NS45MzQ4IDMwIDY2LjgyNSAzMEM4Ny43MTUyIDMwIDEwNC42NSA0Ni41NTQzIDEwNC42NSA2Ni45NzVDMTA0LjY1IDc1LjYxNzkgMTAxLjYxNiA4My41NjgyIDk2LjUzMzMgODkuODYzOUwxMTYuNjk3IDEwOS41NzRDMTE4LjQzNCAxMTEuMjczIDExOC40MzQgMTE0LjAyNyAxMTYuNjk3IDExNS43MjZDMTE0Ljk1OSAxMTcuNDI1IDExMi4xNDEgMTE3LjQyNSAxMTAuNDAzIDExNS43MjZMOTAuMjQwMSA5Ni4wMTU3QzgzLjc5OTYgMTAwLjk4NSA3NS42NjY2IDEwMy45NSA2Ni44MjUgMTAzLjk1QzQ1LjkzNDggMTAzLjk1IDI5IDg3LjM5NTcgMjkgNjYuOTc1Wk04Ny41NjA5IDg2LjY4ODFDODcuNDU4NyA4Ni43NzE2IDg3LjM1OTQgODYuODYwMiA4Ny4yNjM0IDg2Ljk1NDFDODcuMTY3NCA4Ny4wNDc5IDg3LjA3NjcgODcuMTQ1IDg2Ljk5MTMgODcuMjQ0OUM4MS43ODExIDkyLjE5OSA3NC42Njc1IDk1LjI1IDY2LjgyNSA5NS4yNUM1MC44NTAyIDk1LjI1IDM3LjkgODIuNTkwOCAzNy45IDY2Ljk3NUMzNy45IDUxLjM1OTEgNTAuODUwMiAzOC43IDY2LjgyNSAzOC43QzgyLjc5OTggMzguNyA5NS43NSA1MS4zNTkxIDk1Ljc1IDY2Ljk3NUM5NS43NSA3NC42NDEzIDkyLjYyODggODEuNTk1IDg3LjU2MDkgODYuNjg4MVoiIGZpbGw9IiNEOURDREUiLz48L3N2Zz4="
+            alt="">
+         <input class="m-t-24" type="text" placeholder="¿Que estas buscando?">
+      </div>
+
+
+      <!-- TABS DE FILTROS -->
+
+      <div class="tabs m-t-24">
+
+         <div class="tab ">
+            <img
+               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03My41IDMzLjgxODJDNTEuNTg0MyAzMy44MTgyIDMzLjgxODIgNTEuNTg0MyAzMy44MTgyIDczLjVDMzMuODE4MiA5NS40MTU3IDUxLjU4NDMgMTEzLjE4MiA3My41IDExMy4xODJDOTUuNDE1NyAxMTMuMTgyIDExMy4xODIgOTUuNDE1NyAxMTMuMTgyIDczLjVDMTEzLjE4MiA1MS41ODQzIDk1LjQxNTcgMzMuODE4MiA3My41IDMzLjgxODJaTTI1IDczLjVDMjUgNDYuNzE0MiA0Ni43MTQyIDI1IDczLjUgMjVDMTAwLjI4NiAyNSAxMjIgNDYuNzE0MiAxMjIgNzMuNUMxMjIgMTAwLjI4NiAxMDAuMjg2IDEyMiA3My41IDEyMkM0Ni43MTQyIDEyMiAyNSAxMDAuMjg2IDI1IDczLjVaIiBmaWxsPSIjNkM3Nzg2Ii8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03My41IDQyLjYzNjRDNzUuOTM1MSA0Mi42MzY0IDc3LjkwOTEgNDQuNjEwNCA3Ny45MDkxIDQ3LjA0NTVWNzAuNzc1TDkzLjEwODIgNzguMzc0NkM5NS4yODYyIDc5LjQ2MzYgOTYuMTY5IDgyLjExMiA5NS4wOCA4NC4yOUM5My45OTEgODYuNDY4IDkxLjM0MjYgODcuMzUwOCA4OS4xNjQ2IDg2LjI2MThMNzEuNTI4MiA3Ny40NDM2QzcwLjAzNDUgNzYuNjk2NyA2OS4wOTA5IDc1LjE3IDY5LjA5MDkgNzMuNVY0Ny4wNDU1QzY5LjA5MDkgNDQuNjEwNCA3MS4wNjQ5IDQyLjYzNjQgNzMuNSA0Mi42MzY0WiIgZmlsbD0iIzZDNzc4NiIvPjwvc3ZnPg=="
+               alt="">
+            <a href="">
+               <p class="text-small grey-600 ">Historial de canjes</p>
+            </a>
+         </div>
+
+         <div class="tab second ">
+            <img
+               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNS40MDk2IDM1LjU3NzFDMjYuMTMyIDM0LjAwNTUgMjcuNjkyNiAzMyAyOS40MDkxIDMzSDExNy41OTFDMTE5LjMwNyAzMyAxMjAuODY4IDM0LjAwNTUgMTIxLjU5IDM1LjU3NzFDMTIyLjMxMyAzNy4xNDg3IDEyMi4wNjYgMzkuMDAwNiAxMjAuOTU4IDQwLjMyMzVMODYuNzI3MyA4MS4xNzY0VjExNy41NUM4Ni43MjczIDExOS4wOTIgODUuOTM2IDEyMC41MjUgODQuNjM2MiAxMjEuMzM1QzgzLjMzNjMgMTIyLjE0NiA4MS43MTMxIDEyMi4yMiA4MC4zNDY0IDEyMS41M0w2Mi43MSAxMTIuNjNDNjEuMjE2MyAxMTEuODc2IDYwLjI3MjcgMTEwLjMzNiA2MC4yNzI3IDEwOC42NVY4MS4xNzY0TDI2LjA0MjUgNDAuMzIzNUMyNC45MzQxIDM5LjAwMDYgMjQuNjg3MSAzNy4xNDg3IDI1LjQwOTYgMzUuNTc3MVpNMzguOTEyMSA0MS45TDY4LjA0ODUgNzYuNjczNUM2OC43MjE2IDc3LjQ3NjkgNjkuMDkwOSA3OC40OTQ5IDY5LjA5MDkgNzkuNTQ3VjEwNS45TDc3LjkwOTEgMTEwLjM1Vjc5LjU0N0M3Ny45MDkxIDc4LjQ5NDkgNzguMjc4NCA3Ny40NzY5IDc4Ljk1MTUgNzYuNjczNUwxMDguMDg4IDQxLjlIMzguOTEyMVoiIGZpbGw9IiM2Qzc3ODYiLz48L3N2Zz4="
+               alt="">
+            <a href="">
+               <p class="text-small grey-600 ">Filtrar por</p>
+            </a>
+         </div>
+
+         <div class="tab ">
+            <img
+               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01NS4wMjUxIDI1LjAwNTdDNTQuMjkxOCAyNS4wNDI0IDUzLjYwNTcgMjUuMjU4MyA1My4wMDk4IDI1LjYxMDdMMjIuMjIgNDMuMjA0OEMyMC44NDcyIDQzLjk4OTMgMjAgNDUuNDQ5MiAyMCA0Ny4wMzA0VjExNy41MjhDMjAgMTE5LjA5OCAyMC44MzYxIDEyMC41NSAyMi4xOTQ1IDEyMS4zMzhDMjMuNTUzIDEyMi4xMjcgMjUuMjI4NCAxMjIuMTMyIDI2LjU5MjEgMTIxLjM1M0w1NS4zODcyIDEwNC44OTlMODguNDUyNSAxMjEuNDMxQzg5LjA2MzcgMTIxLjc1MiA4OS43NTk0IDEyMS45MzQgOTAuNDk3NiAxMjEuOTM0QzkxLjMyNjIgMTIxLjkzNCA5Mi4xMDEzIDEyMS43MDUgOTIuNzYzMyAxMjEuMzA3TDEyMy41MjYgMTAzLjcyOUMxMjQuODk5IDEwMi45NDQgMTI1Ljc0NiAxMDEuNDg0IDEyNS43NDYgOTkuOTAzMlYyOS40MDYxQzEyNS43NDYgMjcuODM1NCAxMjQuOTEgMjYuMzgzNiAxMjMuNTUxIDI1LjU5NTJDMTIyLjE5MyAyNC44MDY5IDEyMC41MTcgMjQuODAxMyAxMTkuMTU0IDI1LjU4MDVMOTAuMzU4NSA0Mi4wMzQ5TDU3LjMwMzIgMjUuNTA3MkM1Ni43NDE1IDI1LjIxMDcgNTYuMTA4IDI1LjAzMiA1NS40MzU1IDI1LjAwNEM1NS4yOTg4IDI0Ljk5ODIgNTUuMTYxOCAyNC45OTg3IDU1LjAyNTEgMjUuMDA1N1pNOTQuOTAzNyAxMDkuOTM1TDExNi45MzQgOTcuMzQ2M1YzNi45OTg1TDk0LjkwMzcgNDkuNTg3MVYxMDkuOTM1Wk04Ni4wOTE1IDQ5Ljc1MzdMNTkuNjU1MSAzNi41MzU1Vjk3LjE4MDNMODYuMDkxNSAxMTAuMzk5VjQ5Ljc1MzdaTTI4LjgxMjEgNDkuNTg3M0w1MC44NDI5IDM2Ljk5ODNWOTcuMzQ2MUwyOC44MTIxIDEwOS45MzVWNDkuNTg3M1oiIGZpbGw9IiM2Qzc3ODYiLz48L3N2Zz4="
+               alt="">
+            <a href="">
+               <p class="text-small grey-600 ">Mi ubicacion</p>
+            </a>
+         </div>
+      </div>
+
+      <!-- TABS DE FILTROS -->
+
+      <!-- PILLS FILTROS -->
+      <div class="filters m-t-24 flex-row flex-wrap">
+         <a class="filter bg-grey-500 flex-row justify-content-between text-nav white align-items-center">Mercadopago
+            <img
+               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ3IiBoZWlnaHQ9IjE0NyIgdmlld0JveD0iMCAwIDE0NyAxNDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00My4yOTcxIDQzLjI5NzFDNDUuMDI2NiA0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0OS41NiA0My4yOTcxTDczIDY2LjczNzFMOTYuNDQgNDMuMjk3MUM5OC4xNjk0IDQxLjU2NzYgMTAwLjk3MyA0MS41Njc2IDEwMi43MDMgNDMuMjk3MUMxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0Ny44MzA2IDEwMi43MDMgNDkuNTZMNzkuMjYyOSA3M0wxMDIuNzAzIDk2LjQ0QzEwNC40MzIgOTguMTY5NCAxMDQuNDMyIDEwMC45NzMgMTAyLjcwMyAxMDIuNzAzQzEwMC45NzMgMTA0LjQzMiA5OC4xNjk0IDEwNC40MzIgOTYuNDQgMTAyLjcwM0w3MyA3OS4yNjI5TDQ5LjU2IDEwMi43MDNDNDcuODMwNiAxMDQuNDMyIDQ1LjAyNjYgMTA0LjQzMiA0My4yOTcxIDEwMi43MDNDNDEuNTY3NiAxMDAuOTczIDQxLjU2NzYgOTguMTY5NCA0My4yOTcxIDk2LjQ0TDY2LjczNzEgNzNMNDMuMjk3MSA0OS41NkM0MS41Njc2IDQ3LjgzMDYgNDEuNTY3NiA0NS4wMjY2IDQzLjI5NzEgNDMuMjk3MVoiIGZpbGw9IndoaXRlIi8+PC9zdmc+"
+               alt=""></a>
+ 
+
+      </div>
+
+      <!-- PILLS FILTROS -->
+
+      <!-- GIFCARDS DESTACADAS -->
+      <div class="cards-catalogo flex-row  flex-wrap align-items-center m-t-24">
+
+
+      </div>
+
+      <!-- GIFCARDS DESTACADAS -->
+
+      <!-- OTRAS GIFCARDS -->
+      
+
+       <div class="cards-catalogo flex-row  flex-wrap align-items-center">
+         <div class="card-catalogo greyscale">
+            <div class="pill stock"><p class="white text-small-b">Sin stock</p></div>   
+         </div>
+         <div class="card-catalogo"> </div>
+         <div class="card-catalogo"> </div>
+         <div class="card-catalogo"> </div>
+
+      </div>
+    <!-- OTRAS GIFCARDS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+   <script src="https://unpkg.com/micromodal/dist/micromodal.min.j"></script>
+</body>
+
+</html>
