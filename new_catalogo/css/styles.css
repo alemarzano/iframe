@@ -1381,3 +1381,9 @@ option {
 
 }
 
+.pill.discount {
+   width: 80px;
+   border-radius: 0 5px 5px 0;
+   justify-content: flex-end;
+   padding: 1px 10px 1px 3px;
+}
