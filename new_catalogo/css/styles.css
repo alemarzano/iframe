@@ -1387,3 +1387,140 @@ option {
    justify-content: flex-end;
    padding: 1px 10px 1px 3px;
 }
+
+
+
+
+.acordeon-mostrar {
+   width: 100%;
+}
+
+.acordeon-mostrar .title {
+   border-bottom: 1px solid #D9DCDE;
+   padding: 15px 0px;
+   cursor: pointer;
+   color: #246FA9;
+   font-size: 16px;
+}
+
+.acordeon-mostrar .icon {
+   font-size: 30px;
+   float: right;
+   transition: all 1s;
+}
+
+.acordeon-mostrar .activa {
+   transform: rotate(90deg);
+   transition: all 1s;
+}
+
+.acordeon-mostrar .contenido-mostrar p {
+   margin-top: 0px;
+}
+
+.acordeon-mostrar .hidden {
+   display: none;
+}
+
+.contenido-mostrar {
+   border-bottom: 1px solid rgb(217, 220, 222);
+   padding: 16px;
+   background-color: #E8EBED;
+}
+
+
+.contenido-mostrar .text {
+   font-size: 12px;
+   color: #A3A9B4;
+   margin-bottom: 24px;
+}
+
+.contenido-mostrar .card {
+   width: 100%
+}
+
+
+/*acordeon ranking*/
+
+.acordeon-ranking {
+   background-color: white;
+   border-radius: 5px;
+}
+
+.acordeon-ranking .title {
+   padding: 12px;
+   border-bottom: 0 !important;
+   box-shadow: 0px 10px 20px rgba(13, 40, 61, 0.05);
+
+}
+
+.acordeon-ranking .contenido-mostrar {
+   background-color: #f1f2f4;
+}
+
+.acordeon-ranking .row-ganador {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   border-bottom: 1px solid rgb(217, 220, 222);
+   color: #246FA9;
+   min-height: 40px
+}
+
+.acordeon-ranking .position,
+.acordeon-ranking .price {
+   font-weight: bold;
+}
+
+.acordeon-ranking .contenido-mostrar {
+   border-bottom: 0 !important;
+
+}
+
+.acordeon-ranking .row-ganador {
+   padding: 10px 0px;
+}
+
+.row-ganador .name-account {
+   display: flex;
+   flex-direction: column;
+   align-items: center
+
+}
+
+.row-ganador .name-account .account{
+font-size: 12px;
+color: #A3A9B4;
+   
+}
+
+/* big-price-winner */
+
+
+.big-price-winner {
+   width: 47%;
+   box-shadow: 0px 10px 20px rgba(13, 40, 61, 0.05);
+   position: relative;
+   background-color: white;
+   border-radius: 5px;
+   padding: 4px
+}
+
+.big-price-winner .photo img {
+   border-radius: 50%;
+   margin-top: 24px
+}
+
+.big-price-winner .icon {
+   position: absolute;
+   right: 4px;
+   top: 4px
+}
+
+
+.acordeon-mostrar select{
+   width: 100%;
+   background-color: #F1F2F4;
+}

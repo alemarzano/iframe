@@ -7,8 +7,18 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Catalogo Go Open</title>
    <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="icons/icons.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+         <script>
+      $(document).ready(function () {
+         $(".acordeon-mostrar .title").click(function () {
+            $(this).parent().find("div.contenido-mostrar").slideToggle('slow');
+            $(this).find('i.icon').toggleClass('activa');
+         });
+      });
+   </script>
 </head>
 
 <body>
@@ -44,7 +54,39 @@
          </div>
       <!-- MESSAGE -->
 
+      <div class="acordeon-mostrar acordeon-ranking m-t-16">
+         <p class="title text-medium-b">Locales disponibles   <i class="icon small chevron-right-lightgrey"></i></p>
+         <div class="contenido-mostrar hidden" style="display: none;">
+               <select name="provincia" class="m-b-24">
+                     <option value="mendoza ">Mendoza</option>
+                     <option value="buenosaires">Buenos Aires</option>
+               </select>
+             <div class="row-ganador">
+                 <p class="position">Av. Callao </p>
+                 <p class="name">1699</p>
+             </div>
+             
+             <div class="row-ganador">
+                  <p class="position">Av. Callao </p>
+                  <p class="name">1699</p>
+              </div>
 
+              <div class="row-ganador">
+                  <p class="position">Av. Callao </p>
+                  <p class="name">1699</p>
+              </div>
+
+              <div class="row-ganador">
+                  <p class="position">Av. Callao </p>
+                  <p class="name">1699</p>
+              </div>
+
+              <div class="row-ganador">
+                  <p class="position">Av. Callao </p>
+                  <p class="name">1699</p>
+              </div>
+         </div>
+     </div>
 
       <h2 class="text-medium-b grey-500 m-t-16 text-center m-t-32">Vas a canjear:</h2>
 
