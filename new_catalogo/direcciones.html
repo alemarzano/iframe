@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Catalogo Go Open</title>
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="icons/icons.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+         <script>
+      $(document).ready(function () {
+         $(".acordeon-mostrar .title").click(function () {
+            $(this).parent().find("div.contenido-mostrar").slideToggle('slow');
+            $(this).find('i.icon').toggleClass('activa');
+         });
+      });
+   </script>
+</head>
+
+<body>
+   <div class="container">
+
+      <div class="flex-row justify-content-between">
+         <a href="index.html" class="grey-500 text-small flex-row align-items-center m-t-16 m-b-24"> <img class="m-r-8"  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDggMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjcwNzExIDAuMjkyODkzQzguMDk3NjMgMC42ODM0MTcgOC4wOTc2MyAxLjMxNjU4IDcuNzA3MTEgMS43MDcxMUwyLjQxNDIxIDdMNy43MDcxMSAxMi4yOTI5QzguMDk3NjMgMTIuNjgzNCA4LjA5NzYzIDEzLjMxNjYgNy43MDcxMSAxMy43MDcxQzcuMzE2NTggMTQuMDk3NiA2LjY4MzQyIDE0LjA5NzYgNi4yOTI4OSAxMy43MDcxTDAuMjkyODkzIDcuNzA3MTFDLTAuMDk3NjMxMSA3LjMxNjU4IC0wLjA5NzYzMTEgNi42ODM0MiAwLjI5Mjg5MyA2LjI5Mjg5TDYuMjkyODkgMC4yOTI4OTNDNi42ODM0MiAtMC4wOTc2MzExIDcuMzE2NTggLTAuMDk3NjMxMSA3LjcwNzExIDAuMjkyODkzWiIgZmlsbD0iI0EzQTlCNCIvPjwvc3ZnPg==" alt=""> Volver</a>
+      
+      </div>
+      
+      
+
+
+         <h1 class="text-medium-b blue-500 m-t-16">Tus datos personales</h1>
+         <p class="text-small grey-500">Ingresa tus datos personales, algunos campos ya estan cargados en nuestra base de datos.</p>
+         
+         <div class="flex-column">
+            <label for="" class="blue-500 text-medium m-b-8 m-t-24">Nombre y Apellido</label>
+            <input type="text" placeholder="Nombre y apellido" class="full-width" readonly>
+
+            <label for="" class="blue-500 text-medium m-b-8 m-t-24">Tu email</label>
+            <input type="text" placeholder="{Mail de salesforce}" class="full-width" readonly>
+
+            <label for="" class="blue-500 text-medium m-b-8 m-t-24">*D.N.I</label>
+            <input type="text" placeholder="Ingresá tu DNI" class="full-width">
+            <p class="text-small red-500 m-t-8">*Por favor ingrese un numero de D.N.I valido</p>
+
+            <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Telefono</label>
+            <input type="text" placeholder="Ingresá tu telefono" class="full-width">
+         </div>
+         
+
+         <h1 class="text-medium-b blue-500 m-t-40">Direcciones de envio</h1>
+         <p class="text-small grey-500">Agrega direcciones, y luego completa los datos</p>
+         
+
+         <div class="acordeon-mostrar acordeon-ranking m-t-24">
+            <p class="title text-medium">Completa los datos  <i class="icon small chevron-right-lightgrey"></i></p>
+            <div class="contenido-mostrar hidden" style="display: none;">
+              
+               <div class="flex-column">
+                  <div class="flex-row flex-wrap">
+                     <div class="flex-column m-r-16">
+                           <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Calle</label>
+                           <input type="text" placeholder="Nombre de calle" readonly class="full-width">
+                           
+                     </div>
+                     <div class="flex-column">
+                           <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Altura</label>
+                           <input type="text" placeholder="Altura" readonly class="full-width">
+                     </div>
+                  </div>
+                  
+      
+
+                  <label for="" class="blue-500 text-medium m-b-8 m-t-24">Entre</label>
+                  <input type="text" placeholder="Entre calles" readonly class="full-width">
+      
+                  <label for="" class="blue-500 text-medium m-b-8 m-t-24">Piso / Departamento</label>
+                  <input type="text" placeholder="Ingresá el piso / depto" class="full-width">
+      
+                  <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Localidad</label>
+                  <select name="provincia">
+                        <option value="mendoza ">Mendoza</option>
+                        <option value="buenosaires">Buenos Aires</option>
+   
+                  </select>
+
+                  <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Provincia</label>
+                  <select name="provincia">
+                        <option value="mendoza ">Mendoza</option>
+                        <option value="buenosaires">Buenos Aires</option>
+   
+                  </select>
+
+                  <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Codigo postal</label>
+                  <input type="text" placeholder="Codigo postal" class="full-width">
+                  
+                  <label for="" class="blue-500 text-medium m-b-8 m-t-24">Nombre del que lo recibe</label>
+                  <input type="text" placeholder="En caso de que no seas vos" class="full-width">
+               </div>
+
+               <div class="m-t-32">
+                     <a href="direcciones.html"><button class="button bg-green white m-t-16">Guardar</button></a>
+                     </div>
+            </div>
+         </div>
+
+         <div class="acordeon-mostrar acordeon-ranking m-t-24">
+               <p class="title text-medium">Parana 1160 <i class="icon small chevron-right-lightgrey"></i></p>
+               <div class="contenido-mostrar hidden" style="display: none;">
+                 
+                  <div class="flex-column">
+                     <div class="flex-row flex-wrap">
+                        <div class="flex-column m-r-16">
+                              <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Calle</label>
+                              <input type="text" placeholder="Nombre de calle" readonly class="full-width">
+                              
+                        </div>
+                        <div class="flex-column">
+                              <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Altura</label>
+                              <input type="text" placeholder="Altura" readonly class="full-width">
+                        </div>
+                     </div>
+                     
+         
+   
+                     <label for="" class="blue-500 text-medium m-b-8 m-t-24">Entre</label>
+                     <input type="text" placeholder="Entre calles" readonly class="full-width">
+         
+                     <label for="" class="blue-500 text-medium m-b-8 m-t-24">Piso / Departamento</label>
+                     <input type="text" placeholder="Ingresá el piso / depto" class="full-width">
+         
+                     <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Localidad</label>
+                     <select name="provincia">
+                           <option value="mendoza ">Mendoza</option>
+                           <option value="buenosaires">Buenos Aires</option>
+      
+                     </select>
+   
+                     <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Provincia</label>
+                     <select name="provincia">
+                           <option value="mendoza ">Mendoza</option>
+                           <option value="buenosaires">Buenos Aires</option>
+      
+                     </select>
+   
+                     <label for="" class="blue-500 text-medium m-b-8 m-t-24">*Codigo postal</label>
+                     <input type="text" placeholder="Codigo postal" class="full-width">
+                     
+                     <label for="" class="blue-500 text-medium m-b-8 m-t-24">Nombre del que lo recibe</label>
+                     <input type="text" placeholder="En caso de que no seas vos" class="full-width">
+                  </div>
+   
+                  <div class="m-t-32">
+                        <a href="direcciones.html"><button class="button bg-green white m-t-16">Guardar</button></a>
+                        </div>
+               </div>
+            </div>
+         
+
+            <div class="m-t-32">
+               <a href="direcciones.html"><button class="button bg-blue white canjear m-t-16">Agregar Direccion</button></a>
+               </div>
+
+   <script src="https://unpkg.com/micromodal/dist/micromodal.min.j"></script>
+</body>
+
+</html>
